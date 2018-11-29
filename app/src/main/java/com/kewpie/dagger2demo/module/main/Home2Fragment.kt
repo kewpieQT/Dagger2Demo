@@ -19,7 +19,7 @@ import javax.inject.Named
  * Created by kewpie
  * Date: 2018/11/24
  */
-class Home2Fragment : Fragment(){
+class Home2Fragment : Fragment(),Injectable{
 
     @field:Named("fragment2")
     @Inject
@@ -33,9 +33,7 @@ class Home2Fragment : Fragment(){
     lateinit var appUser : UserBean
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        var view = inflater.inflate(R.layout.fr_home,null)
-        return view
+        return inflater.inflate(R.layout.fr_home,null)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
